@@ -41,7 +41,7 @@ Dự án mô phỏng nghiệp vụ quản lý hồ sơ sức khỏe của công 
 ## Cấu trúc dự án
 
 ```
-quan-ly-suc-khoe-cong-dan/
+citizen-health-management/
 ├── .mvn/wrapper/         # Cấu hình Maven Wrapper
 ├── database/               # Script SQL khởi tạo cơ sở dữ liệu
 ├── src/main/                 # Source code chính (Controller, Service, Repository, Entity...)
@@ -64,8 +64,8 @@ quan-ly-suc-khoe-cong-dan/
 ### Cài đặt
 
 ```bash
-git clone https://github.com/nhunguy-swe/quan-ly-suc-khoe-cong-dan.git
-cd quan-ly-suc-khoe-cong-dan
+git clone https://github.com/nhunguy-swe/citizen-health-management.git
+cd citizen-health-management
 ```
 
 ### Cấu hình Database
