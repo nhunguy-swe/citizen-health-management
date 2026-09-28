@@ -1,4 +1,4 @@
-# Quản Lý Sức Khỏe Công Dân
+# Citizen Health Management System
 
 <p>
   <img src="https://img.shields.io/badge/Java-17%2B-orange" alt="Java">
@@ -6,76 +6,76 @@
   <img src="https://img.shields.io/badge/Build-Maven-blue" alt="Maven">
 </p>
 
-Hệ thống quản lý thông tin sức khỏe công dân, xây dựng bằng **Spring Boot**, quản lý bằng **Maven** (Maven Wrapper), có script khởi tạo cơ sở dữ liệu sẵn trong thư mục `database/`.
+A system for managing citizens' health records, built with **Spring Boot** and managed with **Maven** (Maven Wrapper). Includes ready-to-use SQL scripts in the `database/` folder.
 
 ---
 
-## Giới thiệu (About)
+## About
 
-Dự án mô phỏng nghiệp vụ quản lý hồ sơ sức khỏe của công dân trong một cộng đồng/địa phương: lưu trữ thông tin cá nhân, tiền sử bệnh, lịch sử khám chữa bệnh. Phục vụ mục đích học tập, thực hành xây dựng backend theo kiến trúc Spring Boot (Controller – Service – Repository – Entity) kết hợp cơ sở dữ liệu quan hệ.
+This project simulates the workflow of managing citizen health records within a community/local area: storing personal information, medical history, and past examination/treatment records. It is intended for learning and hands-on practice in building a backend with the Spring Boot architecture (Controller – Service – Repository – Entity) alongside a relational database.
 
-> Ghi chú: danh sách tính năng dưới đây là bản nháp dựa trên tên và cấu trúc dự án. Bạn chỉnh lại cho khớp với các API/chức năng thực tế trong `src/main`.
-
----
-
-## Tính năng chính (dự kiến — chỉnh lại theo thực tế)
-
-- Quản lý hồ sơ công dân (thông tin cá nhân, CCCD/CMND)
-- Ghi nhận thông tin sức khỏe, tiền sử bệnh
-- Theo dõi lịch sử khám chữa bệnh
-- Tra cứu, tìm kiếm hồ sơ theo tiêu chí
+> Note: the feature list below is a draft based on the project name and structure. Please adjust it to match what is actually implemented in `src/main`.
 
 ---
 
-## Công nghệ sử dụng
+## Features (draft — adjust to match your code)
 
-| Thành phần | Công nghệ |
+- Manage citizen profiles (personal info, national ID)
+- Record health information and medical history
+- Track examination/treatment history
+- Search and look up records by criteria
+
+---
+
+## Tech Stack
+
+| Component | Technology |
 |---|---|
-| Ngôn ngữ | Java 17+ |
+| Language | Java 17+ |
 | Framework | Spring Boot |
-| Database | Script SQL trong thư mục `database/` |
+| Database | SQL scripts in the `database/` folder |
 | Build tool | Maven (Maven Wrapper `mvnw` / `mvnw.cmd`) |
 
 ---
 
-## Cấu trúc dự án
+## Project Structure
 
 ```
 citizen-health-management/
-├── .mvn/wrapper/         # Cấu hình Maven Wrapper
-├── database/               # Script SQL khởi tạo cơ sở dữ liệu
-├── src/main/                 # Source code chính (Controller, Service, Repository, Entity...)
+├── .mvn/wrapper/         # Maven Wrapper configuration
+├── database/               # SQL scripts to initialize the database
+├── src/main/                 # Main source code (Controller, Service, Repository, Entity...)
 ├── mvnw / mvnw.cmd              # Maven Wrapper script (Linux/macOS & Windows)
-├── pom.xml                        # Cấu hình Maven, khai báo dependencies
+├── pom.xml                        # Maven configuration and dependencies
 ├── .gitignore
 └── README.md
 ```
 
 ---
 
-## Bắt đầu (Getting Started)
+## Getting Started
 
-### Yêu cầu
+### Requirements
 
 - JDK 17+
-- MySQL/PostgreSQL (hoặc DB tương ứng script trong `database/`)
+- MySQL/PostgreSQL (or the DB matching the scripts in `database/`)
 - IDE: IntelliJ IDEA / VS Code / Eclipse
 
-### Cài đặt
+### Installation
 
 ```bash
 git clone https://github.com/nhunguy-swe/citizen-health-management.git
 cd citizen-health-management
 ```
 
-### Cấu hình Database
+### Database Setup
 
-1. Chạy script SQL trong thư mục `database/` để tạo bảng và dữ liệu mẫu.
-2. Cập nhật thông tin kết nối trong `src/main/resources/application.properties` (hoặc `.yml`).
+1. Run the SQL scripts in the `database/` folder to create tables and sample data.
+2. Update the connection info in `src/main/resources/application.properties` (or `.yml`).
 
-> ⚠️ **Lưu ý bảo mật:** không hard-code mật khẩu database trực tiếp trong file `.properties` nếu định push lên GitHub public. Nên dùng biến môi trường hoặc file cấu hình riêng đã được thêm vào `.gitignore`.
+> ⚠️ **Security note:** don't hard-code the database password directly in a `.properties` file if you plan to push to a public GitHub repo. Use environment variables or a separate config file added to `.gitignore` instead.
 
-### Chạy ứng dụng
+### Running the Application
 
 ```bash
 # macOS/Linux
@@ -85,16 +85,16 @@ cd citizen-health-management
 mvnw.cmd spring-boot:run
 ```
 
-Mặc định Spring Boot sẽ chạy tại `http://localhost:8080`.
+By default, Spring Boot runs at `http://localhost:8080`.
 
 ---
 
-## Tác giả
+## Author
 
 - GitHub: [@nhunguy-swe](https://github.com/nhunguy-swe)
 
 ---
 
-## Giấy phép
+## License
 
-Dự án này được thực hiện cho mục đích học tập/thực hành cá nhân. Bạn có thể tham khảo, sử dụng lại code cho mục đích học tập.
+Created for learning/practice purposes. Feel free to reference the code for study.
